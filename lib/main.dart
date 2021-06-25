@@ -1,15 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:my_project/hakkindaSayfasi.dart';
-import 'package:my_project/home.dart';
-import 'package:my_project/loginPage.dart';
+import 'file:///C:/Users/utku/AndroidStudioProjects/my_project/lib/pages/hakkindaSayfasi.dart';
+import 'file:///C:/Users/utku/AndroidStudioProjects/my_project/lib/pages/home.dart';
+import 'file:///C:/Users/utku/AndroidStudioProjects/my_project/lib/pages/loginPage.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

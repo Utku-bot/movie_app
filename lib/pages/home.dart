@@ -1,5 +1,9 @@
+import 'package:animator/animator.dart';
 import 'package:flutter/material.dart';
-import 'package:my_project/categories_.dart';
+import 'file:///C:/Users/utku/AndroidStudioProjects/my_project/lib/pages/categories_.dart';
+import 'file:///C:/Users/utku/AndroidStudioProjects/my_project/lib/pages/moviePage.dart';
+
+import 'izleyeceğim.dart';
 
 class HomePage extends StatefulWidget {
   final username;
@@ -18,7 +22,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-            widget.username == null ? "Kullanıcı Girilmedi" : widget.username),
+             "${widget.username}  Hoşgeldiniz"),
       ),
       body: SafeArea(
         child: Stack(
@@ -27,16 +31,16 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.symmetric(horizontal: 17.0),
               child: ListView(
                 children: <Widget>[
-                  buildBaslik(),
 
-                  SizedBox(height: 40),
-
-                  Text(
-                    'Günün Filmleri',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 24,
-                        color: Colors.black),
+                  Padding(
+                    padding: const EdgeInsets.all(80.0),
+                    child: Text(
+                      'Günün Filmleri',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 24,
+                          color: Colors.black),
+                    ),
                   ),
 
 
@@ -68,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Padding(
                     padding:
-                        EdgeInsets.symmetric(horizontal: 119, vertical: 40),
+                        EdgeInsets.symmetric(horizontal: 10, vertical: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
@@ -77,6 +81,17 @@ class _HomePageState extends State<HomePage> {
                             icon: Icons.add,
                             widget: categoriesPage(),
                             context: context),
+
+                        buildNavigation(
+                            text: 'Favori Filmlerim',
+                            icon: Icons.add,
+                            widget: moviePage(),
+                            context: context),
+                        buildNavigation(
+                            text: 'İzleyeceğim Filmler',
+                            icon: Icons.add,
+                            widget: App(),
+                            context: context),
                       ],
                     ),
                   ),
@@ -84,7 +99,6 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-
           ],
         ),
       ),

@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'header.dart';
 
 
 class movieDetailPage extends StatefulWidget {
@@ -22,6 +21,7 @@ class _movieDetailPageState extends State<movieDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("Film Detay Sayfası"),),
       body: SafeArea(
         child: Stack(
           children: [
@@ -30,7 +30,7 @@ class _movieDetailPageState extends State<movieDetailPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  header(widget.movieTitle, context),
+
                   SizedBox(height: 32),
                   Expanded(
                     child: Padding(
@@ -41,7 +41,7 @@ class _movieDetailPageState extends State<movieDetailPage> {
                           Center(child: Image.asset("assets/images/batman.jpg")),
                           SizedBox(height: 30),
                           Text(
-                            'Yönetmeni : $yonetmen ',
+                            'Yönetmeni : ${yonetmen[0]} ',
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,
@@ -50,7 +50,7 @@ class _movieDetailPageState extends State<movieDetailPage> {
                           SizedBox(height: 16),
                           SizedBox(height: 32),
                           Text(
-                            'Oyuncuları : $oyuncular',
+                            'Oyuncuları : ${oyuncular[0]} ${oyuncular[1]} ',
                             style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.w600,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/home.dart';
+import 'package:my_project/pages/home.dart';
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -9,11 +10,15 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   String username;
   String password;
-  final _formKey = GlobalKey<FormState> ();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Giriş Sayfası"),
+      ),
       resizeToAvoidBottomInset: false,
       body: Form(
         key: _formKey,
@@ -51,21 +56,26 @@ class _LoginPageState extends State<LoginPage> {
                   password = value;
                 },
               ),
-
-            _buton(),
+              _buton(),
             ],
           ),
         ),
       ),
     );
   }
-  Widget _buton() => RaisedButton(child: Text("Giriş Yap"), onPressed: () {
-    if(_formKey.currentState.validate()){
-      _formKey.currentState.save();
-      Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage(username: username ,)));
 
-    }
-  });
+  Widget _buton() => RaisedButton(
+      child: Text("Giriş Yap"),
+      onPressed: () {
+        if (_formKey.currentState.validate()) {
+          _formKey.currentState.save();
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => HomePage(
+                        username: username,
+                      )));
+        }
+      });
+
 }
-
-

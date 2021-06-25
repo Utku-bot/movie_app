@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/category.dart';
-import 'package:my_project/header.dart';
-
-
-void main() {
-  runApp(categoriesPage());
-}
+import 'file:///C:/Users/utku/AndroidStudioProjects/my_project/lib/pages/category.dart';
 
 final List<String> categories = [
-  "Hepsi",
   "AKSİYON",
   "KORKU",
   "BİLİMKURGU",
@@ -20,6 +13,10 @@ class categoriesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Film Türleri"),
+      ),
       body: SafeArea(
         child: Stack(
           children: [
@@ -28,7 +25,6 @@ class categoriesPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  header(" ", context),
                   SizedBox(
                     height: 16,
                   ),
@@ -51,9 +47,14 @@ class categoriesPage extends StatelessWidget {
 Widget buildCategories(String title, context) {
   return GestureDetector(
     onTap: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return CategoryPage(title);
-      }));
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return CategoryPage(title);
+          },
+        ),
+      );
     },
     child: Container(
       margin: EdgeInsets.only(bottom: 16),

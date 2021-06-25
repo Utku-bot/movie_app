@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "439652908421",
+    "project_id": "fimler-final",
+    "storage_bucket": "fimler-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439652908421:android:4320c1ca69bbf4e969d8ec",
+        "android_client_info": {
+          "package_name": "com.example.my_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439652908421-6v55m4iuuj5jimbg3ri4gdeuec84kdir.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.my_project",
+            "certificate_hash": "6f31b3fed1bf50aba49a59bcd77d929edc47c4ac"
+          }
+        },
+        {
+          "client_id": "439652908421-b40eguui7t9u8687mnerqd4rs1m0c7eh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHW76AxtJlyq917woKNKPZ46jvSb42nJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "439652908421-b40eguui7t9u8687mnerqd4rs1m0c7eh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

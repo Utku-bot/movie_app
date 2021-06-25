@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_project/header.dart';
+
 import 'movieDetail .dart';
 
 class CategoryPage extends StatelessWidget {
@@ -18,6 +18,7 @@ class CategoryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(centerTitle: true,title: Text("Filmler"),),
       body: SafeArea(
         child: Stack(
           children: [
@@ -26,7 +27,7 @@ class CategoryPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  header(categoryTitle, context),
+
                   SizedBox(
                     height: 32,
                   ),
@@ -96,7 +97,6 @@ Widget buildContent(String title, String photoUrl, String imbd, context) {
                     fontSize: 16,
                     fontWeight: FontWeight.w500),
               ),
-
             ],
           )
         ],
