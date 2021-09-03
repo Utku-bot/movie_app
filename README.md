@@ -1,1 +1,1 @@
-# Universite projese ödevi için yapılan bi film ve dizi uygulaması.
+# Universite projese ödevi için yapılan bir film ve dizi uygulaması.
